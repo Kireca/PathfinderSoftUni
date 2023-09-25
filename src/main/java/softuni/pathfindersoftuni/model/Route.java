@@ -18,6 +18,11 @@ import java.util.Set;
 @Table(name = "routes")
 public class Route extends BaseEntity {
 
+    @Column(nullable = false)
+    private String name;
+
+    @Column(columnDefinition = "LONGTEXT")
+    private String description;
 
     @Column(name = "gpx_coordinates", columnDefinition = "LONGTEXT")
     private String gpxCoordinates;
@@ -25,14 +30,11 @@ public class Route extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Level level;
 
-    @Column(nullable = false)
-    private String name;
+    @Column(name = "video_url")
+    private String videoUrl;
 
     @ManyToOne
     private User author;
-
-    @Column(name = "video_url")
-    private String videoUrl;
 
     @ManyToMany
     private Set<Category> categories = new HashSet<>();
