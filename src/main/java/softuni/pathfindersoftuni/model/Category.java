@@ -15,11 +15,10 @@ import softuni.pathfindersoftuni.model.enums.CategoryNames;
 public class Category extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private CategoryNames name;
 
 
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "TEXT")
     private String description;
 
 

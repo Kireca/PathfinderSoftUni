@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor()
+@NoArgsConstructor
 
 @Entity
 @Table(name = "users")
@@ -22,23 +22,22 @@ public class User extends BaseEntity {
     private int age;
 
     @Email
-    @Column(name = "email", nullable = false)
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Column(name = "full_name")
     private String fullName;
 
 
-    @Column(name = "password" ,nullable = false)
+    @Column(nullable = false)
     private String password;
 
-    @Column(name = "username" ,nullable = false)
+    @Column(unique = true ,nullable = false)
     private String username;
-    //(id, age, email, full_name, level, password, username)
 
 
-    @ManyToMany
-    private Set<Role> roles = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Role> roles;
 
     @Enumerated(EnumType.STRING)
     private Level level;

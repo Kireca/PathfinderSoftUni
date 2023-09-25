@@ -115,31 +115,31 @@ VALUES (1, '2021-11-14 08:10:40', X'457874726120636F6F6C20726F75746521', 1, 1),
 
 
 INSERT INTO routes_categories
-VALUES ('1', 1);
+VALUES (1, 1);
 INSERT INTO routes_categories
-VALUES ('1', 2);
+VALUES (1, 2);
 INSERT INTO routes_categories
-VALUES ('2', 1);
+VALUES (2, 1);
 INSERT INTO routes_categories
-VALUES ('2', 2);
+VALUES (2, 2);
 INSERT INTO routes_categories
-VALUES ('2', 3);
+VALUES (2, 3);
 INSERT INTO routes_categories
-VALUES ('3', 1);
+VALUES (3, 1);
 INSERT INTO routes_categories
-VALUES ('3', 2);
+VALUES (3, 2);
 INSERT INTO routes_categories
-VALUES ('4', 1);
+VALUES (4, 1);
 INSERT INTO routes_categories
-VALUES ('4', 2);
+VALUES (4, 2);
 INSERT INTO routes_categories
-VALUES ('4', 3);
+VALUES (4, 3);
 INSERT INTO routes_categories
-VALUES ('4', 4);
+VALUES (4, 4);
 INSERT INTO routes_categories
-VALUES ('5', 1);
+VALUES (5, 1);
 INSERT INTO routes_categories
-VALUES ('5', 2);
+VALUES (5, 2);
 
 
 

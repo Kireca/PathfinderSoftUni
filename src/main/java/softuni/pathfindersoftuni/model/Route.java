@@ -18,10 +18,10 @@ import java.util.Set;
 @Table(name = "routes")
 public class Route extends BaseEntity {
 
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String name;
 
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(name = "gpx_coordinates", columnDefinition = "LONGTEXT")
@@ -37,6 +37,6 @@ public class Route extends BaseEntity {
     private User author;
 
     @ManyToMany
-    private Set<Category> categories = new HashSet<>();
+    private Set<Category> categories;
 
 }
