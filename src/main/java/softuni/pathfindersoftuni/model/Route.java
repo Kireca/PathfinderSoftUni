@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import softuni.pathfindersoftuni.model.enums.Level;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -34,6 +35,6 @@ public class Route extends BaseEntity {
     private String videoUrl;
 
     @ManyToMany
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
 
 }
